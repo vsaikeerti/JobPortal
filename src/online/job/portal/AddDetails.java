@@ -179,9 +179,6 @@ public class AddDetails extends JFrame implements ActionListener{
                     
                         String query="insert into employee values('"+username+"','"+aadhaar+"','"+emailid+"','"+gender+"','"+address+"','"+phonenumber+"','"+college+"','"+course+"')";
                         c.s.executeUpdate(query);
-               
-                        JOptionPane.showMessageDialog(null,"Details entered already");
-                        setVisible(false);
                     
                     add.setEnabled(true);
                     JOptionPane.showMessageDialog(null,"Details Added Successfully");

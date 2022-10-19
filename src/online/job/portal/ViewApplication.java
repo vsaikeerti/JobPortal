@@ -104,22 +104,33 @@ public class ViewApplication extends JFrame implements ActionListener {
         
         try{
             Dbconn c=new Dbconn();
-            String query1="select username from applyj where username='"+username+"'";
+            String query1="select * from employee where username='"+username+"'";
             ResultSet r=c.s.executeQuery(query1);
             while(r.next()){
                 addusername.setText(r.getString("username"));
-                //addemail.setText(r.getString("emailid"));
-                //addjob.setText(r.getString("company"));
-                //addgender.setText(r.getString("gender"));
-                //addphone.setText(r.getString("phonenumber"));
-                //addcollege.setText(r.getString("college"));
+                addemail.setText(r.getString("emailid"));
+                addgender.setText(r.getString("gender"));
+                addphone.setText(r.getString("phonenumber"));
+                addcollege.setText(r.getString("college"));
 
 
             }
+            c.conn.close();
         } catch(Exception e){
             e.printStackTrace();
         }
         
+        try{
+            Dbconn c=new Dbconn();
+            String query1="select * from applyj where username='"+username+"'";
+            ResultSet r=c.s.executeQuery(query1);
+            while(r.next()){
+                addjob.setText(r.getString("company"));
+            }
+            c.conn.close();
+           }catch(Exception e){
+            e.printStackTrace();
+            }
         
         setVisible(true);
     }
