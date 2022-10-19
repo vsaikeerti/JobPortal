@@ -117,7 +117,7 @@ public class ViewDetails extends JFrame implements ActionListener{
         
         try{
             Dbconn c=new Dbconn();
-            String query="select * from employee where username='"+username+"'";
+            String query="select * from account where username='"+username+"'";
             ResultSet r=c.s.executeQuery(query);
             while(r.next()){
                 addusername.setText(r.getString("username"));
