@@ -14,10 +14,9 @@ public class Dashboard extends JFrame implements ActionListener {
     
     String username;
     JButton personal,view,update,jobs,apply,help,delapply,viewapply;
-   // String username;
     
     Dashboard(String username){
-        this.username=username;
+       this.username=username;
         
        // setBounds(0,0,1600,1000);
         setExtendedState(JFrame.MAXIMIZED_BOTH);//maximizes the length and breadth of the screen

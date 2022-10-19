@@ -17,9 +17,10 @@ public class UpdateDetails extends JFrame implements ActionListener {
     JTextField tphone,taddress,tcollege,tcourse,tuid,tugender;
     JRadioButton rmale,rfemale;
     JButton update,back;
-    
+    String username;
     
         UpdateDetails(String username){
+            this.username=username;
         //setBounds(450,200,850,550);
         setSize(800,530);
         setLocation(200,130);
@@ -177,7 +178,7 @@ public class UpdateDetails extends JFrame implements ActionListener {
         }
     }
     public static void main(String[] args){
-        new UpdateDetails("vsk");
+        new UpdateDetails("");
     }
     
 }

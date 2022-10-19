@@ -18,7 +18,7 @@ public class ViewApplication extends JFrame implements ActionListener {
     String username;
     
     ViewApplication(String username){
-        //this.username=username;
+        this.username=username;
         
         setSize(700,450);
         setLocation(250,130);
@@ -136,14 +136,14 @@ public class ViewApplication extends JFrame implements ActionListener {
     }
     
     public void actionPerformed(ActionEvent ae){
-        if(ae.getSource()==back){
+       if(ae.getSource()==back){
             setVisible(false);
-            new Dashboard(username);
+            //new Dashboard(username);
         }
     }
     
     public static void main(String args[]){
-        new ViewApplication("karthik");
+        new ViewApplication("");
     }
     
 }

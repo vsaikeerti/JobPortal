@@ -22,9 +22,10 @@ public class Apply extends JFrame implements ActionListener {
     JMenu addresume;
     JMenuBar mb;
     //JTextArea ta;
+    String username;
     
     Apply(String username){
-        //this.username=username;
+        this.username=username;
         setSize(800,500);
         setLocation(150,100);
         setLayout(null);
@@ -173,7 +174,7 @@ public class Apply extends JFrame implements ActionListener {
     }
     
     public static void main(String[] args){
-        new Apply("vsk");
+        new Apply("");
     }
     
 }
