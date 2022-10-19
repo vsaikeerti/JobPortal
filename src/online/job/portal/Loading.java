@@ -42,7 +42,7 @@ public class Loading extends JFrame implements Runnable {
         t=new Thread(this);
         setSize(650,400);
         setLocation(250,150);
-        getContentPane().setBackground(Color.LIGHT_GRAY);
+        getContentPane().setBackground(Color.WHITE);
         setLayout(null);
         
         JLabel text=new JLabel("ONLINE JOB PORTAL");

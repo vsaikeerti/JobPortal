@@ -25,7 +25,7 @@ public class Apply extends JFrame implements ActionListener {
     
     Apply(String username){
         //this.username=username;
-        setSize(900,560);
+        setSize(800,500);
         setLocation(150,100);
         setLayout(null);
         getContentPane().setBackground(Color.WHITE);

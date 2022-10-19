@@ -51,25 +51,25 @@ public class JobAvailability extends JFrame implements ActionListener{
         p1.add(l2);
         
         JLabel l3=new JLabel("JOB DESCRIPTION:");
-        l3.setBounds(80,200,600,40);
+        l3.setBounds(80,170,600,40);
         l3.setForeground(Color.BLACK);
         l3.setFont(new Font("Tahoma",Font.BOLD,30));
         p1.add(l3);
         
         JLabel l4=new JLabel("POSITION  :  Production & Application Support");
-        l4.setBounds(80,280,800,40);
+        l4.setBounds(80,250,800,40);
         l4.setForeground(Color.BLACK);
         l4.setFont(new Font("Tahoma",Font.BOLD,20));
         p1.add(l4);
         
         JLabel l5=new JLabel("LAST DATE  :  31-October-2022");
-        l5.setBounds(80,350,800,40);
+        l5.setBounds(80,330,800,40);
         l5.setForeground(Color.BLACK);
         l5.setFont(new Font("Tahoma",Font.BOLD,20));
         p1.add(l5);
         
         JLabel l6=new JLabel("LOCATION  :  Bhubaneshwar");
-        l6.setBounds(80,420,800,40);
+        l6.setBounds(80,410,800,40);
         l6.setForeground(Color.BLACK);
         l6.setFont(new Font("Tahoma",Font.BOLD,20));
         p1.add(l6);
@@ -91,25 +91,25 @@ public class JobAvailability extends JFrame implements ActionListener{
         p2.add(l8);
         
         JLabel l9=new JLabel("JOB DESCRIPTION");
-        l9.setBounds(80,200,600,40);
+        l9.setBounds(80,170,600,40);
         l9.setForeground(Color.BLACK);
         l9.setFont(new Font("Tahoma",Font.BOLD,30));
         p2.add(l9);
         
         JLabel l10=new JLabel("POSITION  :  Software Engineer");
-        l10.setBounds(80,280,800,40);
+        l10.setBounds(80,250,800,40);
         l10.setForeground(Color.BLACK);
         l10.setFont(new Font("Tahoma",Font.BOLD,20));
         p2.add(l10);
         
         JLabel l11=new JLabel("LAST DATE  :  31-December-2022");
-        l11.setBounds(80,350,800,40);
+        l11.setBounds(80,330,800,40);
         l11.setForeground(Color.BLACK);
         l11.setFont(new Font("Tahoma",Font.BOLD,20));
         p2.add(l11);
         
         JLabel l12=new JLabel("LOCATION  :  Hyderabad");
-        l12.setBounds(80,420,800,40);
+        l12.setBounds(80,410,800,40);
         l12.setForeground(Color.BLACK);
         l12.setFont(new Font("Tahoma",Font.BOLD,20));
         p2.add(l12);
@@ -131,25 +131,25 @@ public class JobAvailability extends JFrame implements ActionListener{
         p3.add(l14);
         
         JLabel l15=new JLabel("JOB DESCRIPTION");
-        l15.setBounds(80,200,600,40);
+        l15.setBounds(80,170,600,40);
         l15.setForeground(Color.BLACK);
         l15.setFont(new Font("Tahoma",Font.BOLD,30));
         p3.add(l15);
         
         JLabel l16=new JLabel("POSITION  :  Database Administrator");
-        l16.setBounds(80,280,800,40);
+        l16.setBounds(80,250,800,40);
         l16.setForeground(Color.BLACK);
         l16.setFont(new Font("Tahoma",Font.BOLD,20));
         p3.add(l16);
         
         JLabel l17=new JLabel("LAST DATE  :  31-November-2022");
-        l17.setBounds(80,350,800,40);
+        l17.setBounds(80,330,800,40);
         l17.setForeground(Color.BLACK);
         l17.setFont(new Font("Tahoma",Font.BOLD,20));
         p3.add(l17);
         
         JLabel l18=new JLabel("LOCATION  :  Banglore");
-        l18.setBounds(80,420,800,40);
+        l18.setBounds(80,410,800,40);
         l18.setForeground(Color.BLACK);
         l18.setFont(new Font("Tahoma",Font.BOLD,20));
         p3.add(l18);
@@ -157,7 +157,7 @@ public class JobAvailability extends JFrame implements ActionListener{
         app1=new JButton("Apply Now");
         app1.setBackground(Color.RED);
         app1.setForeground(Color.WHITE);
-        app1.setBounds(650,450,100,25);
+        app1.setBounds(650,450,200,40);
         app1.addActionListener(this);
         add(app1);
        

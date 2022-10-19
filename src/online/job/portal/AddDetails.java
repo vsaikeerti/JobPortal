@@ -18,9 +18,10 @@ public class AddDetails extends JFrame implements ActionListener{
     JRadioButton rmale,rfemale;
     JButton add,back;
     String username;
+    //int count=0;
     
     AddDetails(String username){
-        this.username=username;
+       this.username=username;
         //setBounds(450,200,850,550);
         setSize(800,530);
         setLocation(200,130);
@@ -154,7 +155,7 @@ public class AddDetails extends JFrame implements ActionListener{
             String emailid=addemail.getText();
             String gender=null;
             
-            if(rmale.isSelected()){  //it tells which otion is selected
+            if(rmale.isSelected()){  //it tells which option is selected
                 gender="Male";
             }
             else{
@@ -164,13 +165,27 @@ public class AddDetails extends JFrame implements ActionListener{
             String phonenumber=addphone.getText();
             String college=tcollege.getText();
             String course=tcourse.getText();
+           
             
             try{
                 Dbconn c=new Dbconn();
-                String query="insert into employee values('"+username+"','"+aadhaar+"','"+emailid+"','"+gender+"','"+address+"','"+phonenumber+"','"+college+"','"+course+"')";
-                c.s.executeUpdate(query);
                 
-                JOptionPane.showMessageDialog(null,"Details Added Successfully");
+                if((username.equals(""))||(aadhaar.equals(""))||(address.equals(""))||(college.equals(""))||(course.equals(""))){
+                add.setEnabled(false);
+                JOptionPane.showMessageDialog(null,"Please enter all fields");
+                new AddDetails(username);
+            }
+                else{
+                    
+                        String query="insert into employee values('"+username+"','"+aadhaar+"','"+emailid+"','"+gender+"','"+address+"','"+phonenumber+"','"+college+"','"+course+"')";
+                        c.s.executeUpdate(query);
+               
+                        JOptionPane.showMessageDialog(null,"Details entered already");
+                        setVisible(false);
+                    
+                    add.setEnabled(true);
+                    JOptionPane.showMessageDialog(null,"Details Added Successfully");
+                }
                 setVisible(false);
                 
             }catch(Exception e){

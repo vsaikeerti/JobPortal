@@ -13,7 +13,7 @@ import java.awt.event.*;
 public class Dashboard extends JFrame implements ActionListener {
     
     String username;
-    JButton personal,view,update,jobs,apply,help;
+    JButton personal,view,update,jobs,apply,help,delapply,viewapply;
    // String username;
     
     Dashboard(String username){
@@ -90,18 +90,20 @@ public class Dashboard extends JFrame implements ActionListener {
         apply.addActionListener(this);
         p2.add(apply);
         
-        JButton viewapply=new JButton("View Application");
+        viewapply=new JButton("View Application");
         viewapply.setBounds(0,350,300,50);
         viewapply.setBackground(new Color(0,0,102));
         viewapply.setForeground(Color.YELLOW);
         viewapply.setFont(new Font("Tahoma",Font.PLAIN,20));
+        viewapply.addActionListener(this);
         p2.add(viewapply);
         
-        JButton delapply=new JButton("Delete Personal Details");
+        delapply=new JButton("Delete Personal Details");
         delapply.setBounds(0,420,300,50);
         delapply.setBackground(new Color(0,0,102));
         delapply.setForeground(Color.YELLOW);
         delapply.setFont(new Font("Tahoma",Font.PLAIN,20));
+        delapply.addActionListener(this);
         p2.add(delapply);
         
         help=new JButton("Logout");
@@ -113,7 +115,7 @@ public class Dashboard extends JFrame implements ActionListener {
         p2.add(help);
         
         JLabel lusername=new JLabel("Hi " +username+"!");
-        lusername.setBounds(1100,15,400,40);
+        lusername.setBounds(1150,15,400,40);
         lusername.setForeground(Color.WHITE);
         lusername.setFont(new Font("RALEWAY",Font.BOLD,20));
         p1.add(lusername);
@@ -130,9 +132,6 @@ public class Dashboard extends JFrame implements ActionListener {
         text.setForeground(Color.BLUE);
         text.setFont(new Font("Tahoma",Font.BOLD,60));
         icon1.add(text);
-        
-        
-        
         
         setVisible(true);
     
@@ -153,6 +152,12 @@ public class Dashboard extends JFrame implements ActionListener {
         }
         else if(ae.getSource()==apply){
             new Apply(username);
+        }
+        else if(ae.getSource()==viewapply){
+            new ViewApplication(username);
+        }
+        else if(ae.getSource()==delapply){
+            new DeleteDetails(username);
         }
         else if(ae.getSource()==help){
             setVisible(false);
