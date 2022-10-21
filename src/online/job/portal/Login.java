@@ -83,18 +83,18 @@ public class Login extends JFrame implements ActionListener{
         
         setVisible(true);
     }
-    
+    @Override
      public void actionPerformed(ActionEvent ae){
-         if(ae.getSource()==login){
+         if(ae.getSource()==login) {//returns the object on which the event is performed 
              try{
                  String username=tusername.getText();
                  String password=tpassword.getText();
                  
                  String query="select * from account where username='"+username+"' AND password='"+password+"'";
-                 Dbconn c=new Dbconn();
+                 Dbconn c=new Dbconn();  //opening the connection
                  ResultSet r=c.s.executeQuery(query);  //the result is stored in the resultset object of the query
                  
-                 if(r.next()){  //.next() returns true or false whther the r object contains anything or not
+                 if(r.next()){  //.next() returns true or false whether the r object contains anything or not
                      setVisible(false);
                      new Loading(username);
                  }

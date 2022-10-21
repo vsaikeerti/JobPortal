@@ -136,10 +136,10 @@ public class ViewApplication extends JFrame implements ActionListener {
     }
     
     public void actionPerformed(ActionEvent ae){
-       if(ae.getSource()==back){
+       //if(ae.getSource()==back){
             setVisible(false);
             //new Dashboard(username);
-        }
+        //}
     }
     
     public static void main(String args[]){
